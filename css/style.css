@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --header:#0047ff;
+    --text_white: #fff;
+    --text_hover: dodgerblue;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: var(--text_white);
+}
+#body {
+    width: 80%;
+    margin: auto;
+    font-family: "Noto Sans Khmer", sans-serif;
+}
+/* Banner */
+#body #banner {
+    background-color: brown;
+    height: 150px;
+    margin-bottom: 5px;}
+#body #menu_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header);
+    margin-bottom: 5px;
+    padding: 7px 10px;
+}
+#body #menu_top .logo img{
+    height: 40px;
+}
+/* Menu */
+#body #menu_top .menu ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+#body #menu_top .menu ul a{
+    position: relative;
+    color: var(--text_white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 15px 10px;
+    transition: all .3s;
+}
+#body #menu_top .menu ul a:hover {
+    color: var(--text_hover);
+}
+/* Menu Dropdown */
+#body #menu_top .menu ul ul {
+    position: absolute;
+    top: 36px;
+    width: 200px;
+    flex-direction: column;
+    background-color: rgb(0, 89, 255);
+    line-height: 30px;
+    opacity: 0;
+    z-index: 999;
+    transform-origin: 0 0 0;
+    transform: scaleY(0);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+#body #menu_top .menu ul ul li {
+    position: relative;
+}
+#body #menu_top .menu ul ul ul {
+    left: 100%;
+    top: 0;
+}
+#body #menu_top .menu ul ul li a{
+    display: block;
+    width: 200px;
+    padding: 3px 5px;
+    border-bottom: 1px solid white;
+}
+#body #menu_top .menu ul :hover > ul {
+    transform: scaleY(1);
+    opacity: 1;
+}
+#body #menu_top .menu ul .active{
+    /* background-color: #1c377d; */
+}
+/* Search */
+#body #menu_top .search{
+    position: relative;
+}
+#body #menu_top .search .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* #body #menu_top .search.active{
+    background-color: #fff;
+    width: 220px;
+} */
+#body #menu_top .search input{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+}
+/* Slide */
+#body #slide {
+    background-color: #4CB9E7;
+    height: 400px;
+    margin-bottom: 5px;
+}
+/* Wrap */
+#body #wrap {
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+} 
+#body #wrap #content{
+    background-color: blueviolet;
+    width: 100%;
+}
+#body #wrap #nav_right{
+    background-color: darkgreen;
+    margin-left: 5px;
+    width: 25%;
+}
+/* Footer */
+#body #menu_footer{
+    color: var(--text_white);
+    background-color: #565656;
+    height: 100px;
+    margin-top: 10px;
+}
+#body #footer{
+    text-align: center;
+    background-color: var(--header);
+    color: var(--text_white);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+}
+#body #footer a{
+    color: var(--text_white);
+    text-decoration: none;
+    transition: all .3s;
+}
+#body #footer a:hover {
+    color: var(--text_hover);
+}
+
+/* Go to top */
+#myBtn{
+    display: none;
+    position: fixed;
+    outline: none;
+    border: none;
+    bottom: 50px;
+    right: 60px;
+    z-index: 999;
+    padding: 10px 13px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--header);
+    color: var(--text_white);
+    transition: all .3s ease-in;
+}
+#myBtn:hover{
+    background-color: #494949;
+}
+
+
+/* Grid */
+/* #body #wrap #content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+} */
+#body #wrap #content .gird{
+    background-color: #0047ff;
+}
+/* #body #wrap #content .gird .image{
+    width: 337px;
+} */
+#body #wrap #content .gird .image img{
+    width: 100%;
+}
+/* End Grid */
+
+/* Content */
+.category{
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: "khmer";
+    font-weight: 300;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+}
+.category a{
+    text-decoration: none;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    transition: all .5s;
+}
+.category a:hover {
+    color: rgb(248, 153, 153);
+}
+/* content */
+.content .item{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin: 10px 0;
+}
+.content .item .row{
+    /* margin: 5px; */
+    padding: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+.content .item .row .cont{
+    padding: 5px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "khmer";
+}
+.content .item .row .thum{
+    position: relative;;
+}
+.content .item .row .thum .image img{
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+.content .item .row .thum .blog-tag {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.content .item .row .thum .blog-tag span{
+    background-color: dodgerblue;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: "khmer";
+    font-size: 15px;
+}
+.content .item .row .cont .title{
+    text-decoration: none;
+    font-size: 17px;
+    margin: 5px 0;
+}
+.content .item .row .cont .title a{
+    font-family: "Noto Sans Khmer", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    transition: all .3s;
+}
+.content .item .row .cont .title a:hover {
+    color: dodgerblue;
+}
+.content .item .row .cont .description {
+    font-size: 16px;
+}
+.content .item .row .cont .tag-blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .item .row .cont .tag-blog .blog-name a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.content .item .row .date {
+    font-size: 15px;
+}
+.content .item .row .date a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ff0000;
+}
+/* End Content */
+
+/* contact */
+.contact{
+    display: flex;
+    margin: 10px 0;
+}
+.contact .info{
+    width: 50%;
+}
+.contact .question{
+    width: 50%;
+}
+.contact h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.contact .info p{
+    opacity: .6;
+}
+.contact .info .list{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.contact .info .contact_icon i{
+    font-size: 20px;
+}
+.contact .info .contact_text{
+    margin-left: 10px;
+}
+.contact .question .form form input, textarea{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #00000021;
+    transition: all .5s;
+}
+.contact .question .form form input:hover, textarea:hover{
+    border: 1px solid #7a7a7a;
+}
+.contact .question .form form input:focus, textarea:focus{
+    border: 1px solid #000000;
+}
+.contact .question .form form textarea{
+    margin-top: 5px;
+    resize: none;
+    height: 105px;
+}
+.contact .question .form button{
+    margin: 5px 0;
+    padding: 8px 25px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: var(--header);
+    color: #fff;
+}
+
+/* Question And Answer */
+#question .question .ques h3{
+    margin-top: 10px;
+    cursor: pointer;
+}
+#question .question .answer{
+    display: none;
+}
