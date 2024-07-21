@@ -91,7 +91,7 @@
     opacity: 1;
 }
 #body #menu_top .menu ul .active{
-    /* background-color: #1c377d; */
+    background-color: #1c377d;
 }
 /* Search */
 #body #menu_top .search{
