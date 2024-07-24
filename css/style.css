@@ -340,7 +340,7 @@
     border: 1px solid #00000021;
     transition: all .5s;
 }
-.contact .question .form form input:hover, textarea:hover{
+.contact .question .form form input:hover textarea:hover{
     border: 1px solid #7a7a7a;
 }
 .contact .question .form form input:focus, textarea:focus{
@@ -351,9 +351,10 @@
     resize: none;
     height: 105px;
 }
-.contact .question .form button{
+.contact .question .form .btn-primary{
     margin: 5px 0;
     padding: 8px 25px;
+    width: 120px;
     cursor: pointer;
     outline: none;
     border: none;

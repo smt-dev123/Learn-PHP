@@ -14,31 +14,24 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE     and Opera
 }
 
-// ------- Btn Search -------
 $(document).ready(function () {
+    // ------- Btn Search -------
     $('.icon').click(function () { 
         $('.search').css({'background': '#fff', 'width': '95%'});
         $('#body #menu_top .menu ul').hide();
     });
+    
+    // ------- Question And Answer -------
+        $('.ques').click(function(){
+            // Check if the clicked question's answer is already visible
+            if (!$(this).next('.answer').is(':visible')) {
+                // If not visible, slide up all other answers and toggle the clicked answer
+                $('.answer').slideUp();
+                $(this).next('.answer').slideDown();
+            } else {
+                // If already visible, just slide up the clicked answer
+                $(this).next('.answer').slideUp();
+            }
+        });
 });
 
-// ------- Question And Answer -------
-$(document).ready(function () {
-    $('.ques').click(function(){
-        // Check if the clicked question's answer is already visible
-        if (!$(this).next('.answer').is(':visible')) {
-            // If not visible, slide up all other answers and toggle the clicked answer
-            $('.answer').slideUp();
-            $(this).next('.answer').slideDown();
-        } else {
-            // If already visible, just slide up the clicked answer
-            $(this).next('.answer').slideUp();
-        }
-    });
-
-    // Active Menu
-    // $('#body #menu_top .menu ul').click(function () { 
-    //     $('#body #menu_top .menu ul a').addClass('active');
-        
-    // });
-});
